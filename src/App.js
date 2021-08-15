@@ -1,14 +1,38 @@
+import Expenses from "./components/Expenses";
+import React from "react";
 
-import './App.css';
-
-function App() {
-  let hulname = "my name is AQ"
+const App = () => {
+  const expenses = [
+    {
+      id: "e1",
+      date: new Date("2023.5.17"),
+      title: "BMW",
+      price: 360000,
+    },
+    {
+      id: "e2",
+      date: new Date("2018.7.25"),
+      title: "frari",
+      price: 600000,
+    },
+    {
+      id: "e3",
+      date: new Date("2022.6.19"),
+      title: "wagon",
+      price: 460000,
+    },
+    {
+      id: "e4",
+      date: new Date("2021.7.15"),
+      title: "honda",
+      price: 560000,
+    },
+  ];
   return (
-    <div className="App">
-     
-    <h2>{hulname}</h2>
+    <div>
+      <h1>Hello World</h1>
+      <Expenses items={expenses} />
     </div>
   );
-}
-
+};
 export default App;
